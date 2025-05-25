@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BeatrizPinheiroAG13DS.Views"
+             x:Class="BeatrizPinheiroAG13DS.Views.ContratacaoHospedagem"
+             Title="ContratacaoHospedagem"
+             NavigationPage.HasNavigationBar="False"
+<<<<<<< HEAD
+             BackgroundColor="MediumVioletRed">
+=======
+             BackgroundColor="{StaticResource Gray100}">
+
+>>>>>>> 091fa82872f7cb6cc10e762fd13d7fd6b2b8e361
+    <Grid RowDefinitions="Auto, *"
+          ColumnDefinitions="*">
+
+        <Label Grid.Row="0"
+               Text="Cálculo da Diária"
+               FontFamily="Kalam"
+               FontSize="50"
+<<<<<<< HEAD
+               TextColor="AntiqueWhite"
+=======
+               TextColor="{StaticResource Primary}"
+>>>>>>> 091fa82872f7cb6cc10e762fd13d7fd6b2b8e361
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+        <Frame Grid.Row="1"
+               Padding="10">
+            <VerticalStackLayout>
+                <Grid RowDefinitions="Auto, Auto"
+                      ColumnDefinitions="*,*, 2*">
+
+                    <Label Grid.Row="0" Grid.Column="0"
+                           Text="Adultos:" />
+
+                    <Label Grid.Row="0" Grid.Column="1"
+<<<<<<< HEAD
+                           TextColor="MediumVioletRed"
+=======
+                           TextColor="{StaticResource Primary}"
+>>>>>>> 091fa82872f7cb6cc10e762fd13d7fd6b2b8e361
+                           Text="{Binding Value}"
+                           BindingContext="{x:Reference stp_adultos}"/>
+
+                    <Stepper Grid.Row="0" Grid.Column="2"
+                             x:Name="stp_adultos"
+                             Minimum="0"
+                             Maximum="10"
+                             Increment="1"/>
+
+                    <Label Grid.Row="1" Grid.Column="0"
+                           Text="Crianças:"/>
+
+                    <Label Grid.Row="1" Grid.Column="1"
+<<<<<<< HEAD
+                           TextColor="MediumVioletRed"
+=======
+                           TextColor="{StaticResource Primary}"
+>>>>>>> 091fa82872f7cb6cc10e762fd13d7fd6b2b8e361
+                           Text="{Binding Value}"
+                           BindingContext="{x:Reference stp_criancas}"/>
+
+                    <Stepper Grid.Row="1" Grid.Column="2"
+                             x:Name="stp_criancas"
+                             Minimum="0"
+                             Maximum="10"
+                             Increment="1"/>
+
+                </Grid>
+                <Label Text="Escolha sua suíte"/>
+                <Picker x:Name="pck_quarto"
+                        Title="Selecione sua acomodação"/>
+
+                <Frame Padding="10"
+                       Margin="10">
+                    <VerticalStackLayout>
+                        <Label Text="Período da Estadia"/>
+                        <HorizontalStackLayout>
+                            <Label Text="Check-in:"/>
+                            <DatePicker x:Name="dtpck_checkin"
+                                        Format="dd/MM/yyyy"/>
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout>
+                            <Label Text="Check-out:"/>
+                            <DatePicker x:Name="dtpck_checkout"
+                                        Format="dd/MM/yyyy"/>
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
+
+                </Frame>
+<<<<<<< HEAD
+                <Button Text="Avançar"
+                        BackgroundColor="MediumVioletRed"/>
+=======
+                <Button Text="Avançar"/>
+>>>>>>> 091fa82872f7cb6cc10e762fd13d7fd6b2b8e361
+                <Button Text="Sobre"
+                        BackgroundColor="Gray"
+                        Clicked="OnSobreClicked"/>
+            </VerticalStackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>
