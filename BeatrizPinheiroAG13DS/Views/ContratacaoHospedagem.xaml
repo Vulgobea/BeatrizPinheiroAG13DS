@@ -5,12 +5,7 @@
              x:Class="BeatrizPinheiroAG13DS.Views.ContratacaoHospedagem"
              Title="ContratacaoHospedagem"
              NavigationPage.HasNavigationBar="False"
-<<<<<<< HEAD
              BackgroundColor="MediumVioletRed">
-=======
-             BackgroundColor="{StaticResource Gray100}">
-
->>>>>>> 091fa82872f7cb6cc10e762fd13d7fd6b2b8e361
     <Grid RowDefinitions="Auto, *"
           ColumnDefinitions="*">
 
@@ -18,11 +13,7 @@
                Text="Cálculo da Diária"
                FontFamily="Kalam"
                FontSize="50"
-<<<<<<< HEAD
                TextColor="AntiqueWhite"
-=======
-               TextColor="{StaticResource Primary}"
->>>>>>> 091fa82872f7cb6cc10e762fd13d7fd6b2b8e361
                HorizontalOptions="Center"
                VerticalOptions="Center" />
 
@@ -36,11 +27,7 @@
                            Text="Adultos:" />
 
                     <Label Grid.Row="0" Grid.Column="1"
-<<<<<<< HEAD
                            TextColor="MediumVioletRed"
-=======
-                           TextColor="{StaticResource Primary}"
->>>>>>> 091fa82872f7cb6cc10e762fd13d7fd6b2b8e361
                            Text="{Binding Value}"
                            BindingContext="{x:Reference stp_adultos}"/>
 
@@ -54,11 +41,7 @@
                            Text="Crianças:"/>
 
                     <Label Grid.Row="1" Grid.Column="1"
-<<<<<<< HEAD
                            TextColor="MediumVioletRed"
-=======
-                           TextColor="{StaticResource Primary}"
->>>>>>> 091fa82872f7cb6cc10e762fd13d7fd6b2b8e361
                            Text="{Binding Value}"
                            BindingContext="{x:Reference stp_criancas}"/>
 
@@ -92,13 +75,9 @@
                     </VerticalStackLayout>
 
                 </Frame>
-<<<<<<< HEAD
                 <Button Text="Avançar"
                         BackgroundColor="MediumVioletRed"/>
-=======
-                <Button Text="Avançar"/>
->>>>>>> 091fa82872f7cb6cc10e762fd13d7fd6b2b8e361
-                <Button Text="Sobre"
+                    <Button Text="Sobre"
                         BackgroundColor="Gray"
                         Clicked="OnSobreClicked"/>
             </VerticalStackLayout>
