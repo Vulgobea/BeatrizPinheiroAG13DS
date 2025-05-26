@@ -2,21 +2,27 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BeatrizPinheiroAG13DS.Views.Sobre"
-             Title="Sobre"
-             BackgroundColor="MediumVioletRed">
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="AntiqueWhite">
 
     <VerticalStackLayout Padding="20" VerticalOptions="Center">
         <Label Text="Desenvolvido por: Beatriz Pinheiro"
                FontSize="22"
-               TextColor="AntiqueWhite"
-               FontFamily="Kalam"
+               TextColor="MediumVioletRed"
+               FontFamily="Kalam-Bold"
                HorizontalOptions="Center"/>
         
         <Label Text="Ano de Desenvolvimento: 2025"
                FontSize="18"
-               TextColor="AntiqueWhite"
-               FontFamily="Kalam"
+               TextColor="Purple"
+               FontFamily="Kalam-Bold"
                HorizontalOptions="Center"/>
-        
+
+        <Button Text="Voltar" 
+        HorizontalOptions="Center"
+        Clicked="Button_Clicked_1"
+        BackgroundColor="MediumVioletRed"
+        FontFamily="Kalam-Bold"/>
+
     </VerticalStackLayout>
 </ContentPage>

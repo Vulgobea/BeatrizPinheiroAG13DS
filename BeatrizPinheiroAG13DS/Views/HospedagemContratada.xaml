@@ -2,11 +2,70 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BeatrizPinheiroAG13DS.Views.HospedagemContratada"
-             Title="HospedagemContratada">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="AntiqueWhite">
+    <VerticalStackLayout VerticalOptions="CenterAndExpand">
+        <Label
+            Text="Suíte Super Luxo"
+            TextColor="MediumVioletRed"
+            FontFamily="Kalam-Regular"
+            FontSize="50"
+            HorizontalTextAlignment="Center"/>
+
+        <Frame Margin="10">
+            <HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="Adultos: "
+                           FontFamily="Kalam-Bold"/>
+                    <Label Text=" 2"
+                           TextColor="MediumVioletRed"
+                           FontFamily="Kalam-Regular"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <Label Text=" Crianças: "
+                           FontFamily="Kalam-Bold"/>
+                    <Label Text=" 1"
+                           TextColor="MediumVioletRed"
+                           FontFamily="Kalam-Regular"/>
+                </HorizontalStackLayout>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Margin="10">
+            <Grid ColumnDefinitions="*,*,*"
+                  RowDefinitions="Auto, Auto">
+                <Label Grid.Row="0" Grid.Column="0" Text="Check-in: "
+                       FontFamily="Kalam-Bold"/>
+                <Label Grid.Row="0" Grid.Column="1" Text="Check-out: "
+                       FontFamily="Kalam-Bold"/>
+                <Label Grid.Row="0" Grid.Column="2" Text="Estadia: "
+                       FontFamily="Kalam-Bold"/>
+
+                <Label Grid.Row="1" Grid.Column="0" Text="27/05/2024 "
+                       FontFamily="Kalam-Regular"/>
+                <Label Grid.Row="1" Grid.Column="1" Text="30/05/2024 "
+                       FontFamily="Kalam-Regular"/>
+                <Label Grid.Row="1" Grid.Column="2" Text="3"
+                       FontFamily="Kalam-Regular"/>
+            </Grid>
+        </Frame>
+
+        <Frame Margin="10">
+            <HorizontalStackLayout>
+                <Label Text="Valor Total:"
+                       FontFamily="Kalam-Bold"/>
+                
+                <Label Text="R$ 750,00"
+                  FontFamily="Kalam-Regular"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Button Text="Voltar" 
+                HorizontalOptions="Center"
+                BackgroundColor="MediumVioletRed"
+                FontFamily="Kalam-Bold"
+                Clicked="Button_Clicked"/>
+
     </VerticalStackLayout>
 </ContentPage>
