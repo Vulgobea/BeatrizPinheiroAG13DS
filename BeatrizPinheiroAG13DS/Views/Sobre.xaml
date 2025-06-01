@@ -8,11 +8,13 @@
     <VerticalStackLayout Padding="20" VerticalOptions="Center">
         <Label Text="Desenvolvido por: Beatriz Pinheiro"
                FontSize="22"
+               TextTransform="Default"
                TextColor="MediumVioletRed"
                FontFamily="Kalam-Bold"
                HorizontalOptions="Center"/>
         
         <Label Text="Ano de Desenvolvimento: 2025"
+               TextTransform="Uppercase"
                FontSize="18"
                TextColor="Purple"
                FontFamily="Kalam-Bold"

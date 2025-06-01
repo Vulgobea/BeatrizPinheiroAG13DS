@@ -6,58 +6,76 @@
              BackgroundColor="AntiqueWhite">
     <VerticalStackLayout VerticalOptions="CenterAndExpand">
         <Label
-            Text="Suíte Super Luxo"
+            Text="{Binding QuartoSelecionado.Descricao}"
             TextColor="MediumVioletRed"
             FontFamily="Kalam-Regular"
             FontSize="50"
             HorizontalTextAlignment="Center"/>
 
-        <Frame Margin="10">
-            <HorizontalStackLayout>
-                <HorizontalStackLayout>
-                    <Label Text="Adultos: "
+        <Frame Margin="10"
+               BackgroundColor="AntiqueWhite">
+            <StackLayout Orientation="Horizontal">
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                    <Label Text="Adultos:"
                            FontFamily="Kalam-Bold"/>
-                    <Label Text=" 2"
+                    <Label Text="{Binding QntAdultos}"
                            TextColor="MediumVioletRed"
-                           FontFamily="Kalam-Regular"/>
+                           FontFamily="Kalam-Regular"
+                           />
                 </HorizontalStackLayout>
 
-                <HorizontalStackLayout>
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                     <Label Text=" Crianças: "
                            FontFamily="Kalam-Bold"/>
-                    <Label Text=" 1"
+                    <Label Text="{Binding QntCriancas}"
                            TextColor="MediumVioletRed"
                            FontFamily="Kalam-Regular"/>
                 </HorizontalStackLayout>
-            </HorizontalStackLayout>
+            </StackLayout>
         </Frame>
 
-        <Frame Margin="10">
+        <Frame Margin="10"
+               BackgroundColor="AntiqueWhite">
             <Grid ColumnDefinitions="*,*,*"
                   RowDefinitions="Auto, Auto">
                 <Label Grid.Row="0" Grid.Column="0" Text="Check-in: "
-                       FontFamily="Kalam-Bold"/>
+                       FontFamily="Kalam-Bold"
+                       />
+                
                 <Label Grid.Row="0" Grid.Column="1" Text="Check-out: "
-                       FontFamily="Kalam-Bold"/>
+                       FontFamily="Kalam-Bold"
+                       />
+                
                 <Label Grid.Row="0" Grid.Column="2" Text="Estadia: "
-                       FontFamily="Kalam-Bold"/>
+                       FontFamily="Kalam-Bold"
+                       />
 
-                <Label Grid.Row="1" Grid.Column="0" Text="27/05/2024 "
-                       FontFamily="Kalam-Regular"/>
-                <Label Grid.Row="1" Grid.Column="1" Text="30/05/2024 "
-                       FontFamily="Kalam-Regular"/>
-                <Label Grid.Row="1" Grid.Column="2" Text="3"
-                       FontFamily="Kalam-Regular"/>
+                <Label Grid.Row="1" Grid.Column="0" 
+                       Text="{Binding DataCheckIn, StringFormat='{}{0:dd/MM/yyyy}'}"
+                       FontFamily="Kalam-Regular"
+                       TextColor="MediumVioletRed"/>
+                
+                <Label Grid.Row="1" Grid.Column="1" 
+                       Text="{Binding DataCheckOut, StringFormat='{}{0:dd/MM/yyyy}'}"
+                       FontFamily="Kalam-Regular"
+                       TextColor="MediumVioletRed"/>
+                
+                <Label Grid.Row="1" Grid.Column="2" 
+                       Text="{Binding Estadia}"
+                       FontFamily="Kalam-Regular"
+                       TextColor="MediumVioletRed"/>
             </Grid>
         </Frame>
 
-        <Frame Margin="10">
-            <HorizontalStackLayout>
-                <Label Text="Valor Total:"
+        <Frame Margin="10"
+               BackgroundColor="FloralWhite">
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                <Label Text="Valor Total :"
                        FontFamily="Kalam-Bold"/>
-                
-                <Label Text="R$ 750,00"
-                  FontFamily="Kalam-Regular"/>
+
+                <Label Text="{Binding ValorTotal, StringFormat='{}{0:c}'}"
+                       FontFamily="Kalam-Regular"
+                       TextColor="MediumVioletRed"/>
             </HorizontalStackLayout>
         </Frame>
 

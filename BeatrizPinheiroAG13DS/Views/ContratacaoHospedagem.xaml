@@ -15,7 +15,8 @@
                FontSize="50"
                TextColor="AntiqueWhite"
                HorizontalOptions="Center"
-               VerticalOptions="Center" />
+               VerticalOptions="Center"
+               CharacterSpacing="0.5"/>
 
         <Frame Grid.Row="1"
                Padding="10">
@@ -56,19 +57,36 @@
                              Increment="1"/>
 
                 </Grid>
-                <Label Text="Escolha sua suíte"
-                       FontFamily="Kalam-Bold"/>
-                <Picker x:Name="pck_quarto"
+
+                <Frame Padding="10" Margin="10">
+                    <VerticalStackLayout>
+                        
+                        <Label Text="Escolha sua suíte"
+                       FontFamily="Kalam-Bold"
+                       TextTransform="Uppercase"
+                       FontSize="Subtitle"
+                       TextColor="MediumVioletRed"/>
+
+                        <Picker x:Name="pck_quarto"
                         Title="Selecione sua acomodação"
-                        FontFamily="Kalam-Bold"
+                        BackgroundColor="FloralWhite"
+                        FontFamily="Kalam-Bold" 
                         ItemDisplayBinding="{Binding Descricao}"/>
+                    </VerticalStackLayout>
+                </Frame>
 
                 <Frame Padding="10"
-                       Margin="10">
-                    <VerticalStackLayout>
+                       Margin="10"
+                       BackgroundColor="FloralWhite">
+                    
+                    <VerticalStackLayout Spacing="10">
                         <Label Text="Período da Estadia"
+                               TextTransform="Uppercase"
+                               FontSize="Subtitle"
                                FontFamily="Kalam-Bold"/>
-                        <HorizontalStackLayout>
+                        
+                        
+                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                             <Label Text="Check-in:"
                                    FontFamily="Kalam-Bold"/>
                             <DatePicker x:Name="dtpck_checkin"
@@ -76,7 +94,7 @@
                                         Format="dd/MM/yyyy"/>
                         </HorizontalStackLayout>
 
-                        <HorizontalStackLayout>
+                        <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
                             <Label Text="Check-out:"
                                    FontFamily="Kalam-Bold"/>
                             <DatePicker x:Name="dtpck_checkout"
@@ -87,10 +105,12 @@
 
                 </Frame>
                 <Button Text="Avançar"
+                        HorizontalOptions="CenterAndExpand"
                         Clicked="Button_Clicked"
                         BackgroundColor="MediumVioletRed"
                         FontFamily="Kalam-Bold"/>
                     <Button Text="Sobre"
+                        HorizontalOptions="CenterAndExpand"
                         BackgroundColor="Gray"
                         FontFamily="Kalam-Bold"
                         Clicked="OnSobreClicked"/>

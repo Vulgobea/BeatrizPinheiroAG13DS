@@ -1,3 +1,5 @@
+using BeatrizPinheiroAG13DS.Models;
+
 namespace BeatrizPinheiroAG13DS.Views;
 
 public partial class ContratacaoHospedagem : ContentPage
@@ -25,16 +27,29 @@ public partial class ContratacaoHospedagem : ContentPage
         Navigation.PushAsync(new Sobre()); // Navega corretamente para a página Sobre
     }
 
-    private void Button_Clicked(object sender, EventArgs e)
+    private async void Button_Clicked(object sender, EventArgs e)
     {
         try
         {
-            Navigation.PushAsync(new HospedagemContratada());
+            Hospedagem h = new Hospedagem
+            {
+                QuartoSelecionado = (Quarto)pck_quarto.SelectedItem,
+                QntAdultos= Convert.ToInt32(stp_adultos.Value),
+                QntCriancas = Convert.ToInt32(stp_criancas.Value),
+                DataCheckIn = dtpck_checkin.Date,
+                DataCheckOut = dtpck_checkout.Date,
+
+            };
+
+            await Navigation.PushAsync(new HospedagemContratada()
+            {
+                BindingContext = h
+            });
 
         }
         catch (Exception ex)
         {
-            DisplayAlert("Ops",ex.Message, "OK");
+            await DisplayAlert("Ops",ex.Message, "OK");
         }
     }
 
